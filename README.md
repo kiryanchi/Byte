@@ -38,10 +38,6 @@
 1. 포크뜨기
 [github/Byte](https://github.com/hackersground-kr/Byte)에 접속한다.
 
-![image](https://github.com/hackersground-kr/Byte/assets/106953846/b510bc95-4e65-4fcf-bc5b-73c73583fd2e)
-
-
-
 사진에 보이는 fork를 누르고 create fork 버튼을 눌러준다.
 
 2. 리소스 그룹 만들기
