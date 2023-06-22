@@ -22,17 +22,20 @@
 <!-- 위 링크는 지우지 마세요 -->
 
 ## 설치 방법
+https://github.com/ 에서 회원가입한다.
 
-> **아래 제공하는 설치 방법을 통해 심사위원단이 여러분의 제품/서비스를 실제 Microsoft 애저 클라우드에 배포하고 설치할 수 있어야 합니다. 만약 아래 설치 방법대로 따라해서 배포 및 설치가 되지 않을 경우 본선에 진출할 수 없습니다.**
 
 ### 사전 준비 사항
 
-> **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위해 사전에 필요한 준비 사항들을 적어주세요.**
-> [Microsoft Azure](https://portal.azure.com)
-> github account, azure free account, visual studio code
+- [Microsoft Azure](https://portal.azure.com)
+- github account
+- azure free account
+- visual studio code
 
 ## 시작하기
 [Microsoft Azure](https://portal.azure.com)에 접속한다.
+
+fork를 뜬다.
 
 좌측 상단에 줄 세개짜리를 누르고 '모든 서비스'를 누른다.
 
