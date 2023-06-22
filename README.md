@@ -22,51 +22,83 @@
 <!-- 위 링크는 지우지 마세요 -->
 
 ## 설치 방법
-https://github.com/ 에서 회원가입한다.
+- [github](https://github.com) 에서 회원가입한다.
+- [azure](azure.microsoft.com)구독하기
+- [visual studio](http://visualstudio.microsoft.com)가서 깔기
 
 
 ### 사전 준비 사항
 
 - [Microsoft Azure](https://portal.azure.com)
-- github account
-- azure free account
-- visual studio code
+- [github](https://github.com) : github account
+- [azure](azure.microsoft.com) : azure free account
+- [visual studio](http://visualstudio.microsoft.com) : visual studio code
 
 ## 시작하기
+1. 포크뜨기
+[github/Byte](https://github.com/hackersground-kr/Byte)에 접속한다.
+
+<사진>
+
+사진에 보이는 fork를 누르고 create fork 버튼을 눌러준다.
+
+2. 리소스 그룹 만들기
+
 [Microsoft Azure](https://portal.azure.com)에 접속한다.
 
-fork를 뜬다.
+좌측 상단의 줄 3개 모양 버튼을 누르면 나오는 리소스 그룹 버튼을 클릭한다.
+
++ 만들기를 누른다.
+
+누르면 나오는 화면에서 리소스 그룹 옆 칸에 rg-hg-원하는이름(*단, 중복이 되지 않도록 유니크한 이름으로)을 적는다.
+
+리소스 영역은 (Asia Pacific) Korea Central을 선택한다.
+
+하단에 있는 검토+만들기를 클릭하고 만들기 버튼을 누른다.
+
+3. 리소스 만들기
 
 좌측 상단에 줄 세개짜리를 누르고 '모든 서비스'를 누른다.
 
 '리소스 그룹'을 클릭한다.
 
+2번에서 만들었던 '리소스 그룹'을 클릭한다.
+
++사진
+
 좌측 상단에 '+만들기'를 누른다.
+
+웹앱을 검색하거나 스크롤을 내려서 찾아 클릭하고 만들기를 누른다.
 
 들어가자마자 기본/배포/네트워킹/모니터링/태그/검토+만들기 로 카테고리가 나눠진 화면이 보일 것이다. 각각에 대한 설명을 상세하게 적겠다.
 
 기본 카테고리에서 할 일)
 
-- 웹 앱을 누른다
-- 구독 옆에는 Heckers Ground 설정한 후, 구독에 연결된 리소스 그룹에 rg-hg-byte를 입력한다.
+- 구독 옆에는 Hackers Ground 설정한 후, 구독에 연결된 리소스 그룹에 rg-hg-byte를 입력한다.
+- 웹앱 이름은 중복되지 않는 원하는 이름으로 선택한다.
 - 게시는 코드를 선택한다.
 - 런타임 스택에 Python 3.8을 선택한다.
 - 운영체제 Linux를 선택한다.
 - 지역에는 Korea Central을 선택한다.
+- Linux plan은 (신규)ASP-rghgByte-8a60 선택
+- 가격책정에는 기본B1(100총 ACU, 1.75GB 메모리, 1vCPU) 선택
+- 영역중복은 건드리지 않고 넘어간다.
+
+왼쪽 하단에 "다음:배포" 버튼을 클릭한다.
   
 배포에서 할 일)
 
 -Github Action 설정 – 지속적인 배포 사용을 선택한다.
 -Github 계정 권한부여를 누르고 뜨는 화면에 password를 입력한다.
--조직은 hackersground-kr
-- 리포지토리는 Byte
-- 분기는 main
+-조직은 hackersground-kr 선택
+- 리포지토리는 Byte 선택
+- 분기는 main 선택
 
 *네트워킹, 모니터링, 태그는 패스한다.
 
 검토+만들기)
 
--만들기를 누른다.
+-설정했던 값이 맞는지 확인한 후 만들기를 누른다. 
 
 -배포 진행 중에서 배포가 완료됨이 뜰 때 까지 기다린다.
 
@@ -74,9 +106,15 @@ fork를 뜬다.
 
 -이동을 누르면 나타나는 화면에 오른쪽 5번째 줄에 github프로젝트 옆에 있는 링크를 누른다.
 
++사진
+
 그다음 Actions에 들어간다.
 
--build가 안 됐으면 안된 걸 확인해주고 오류를 고쳐준다. 오류가 고쳐지면 deploy 밑에 링크가 뜬다. 그 링크를 들어가서 welcome to azure 뜨면 배포가 성공된 것이다. 
++사진
 
+-리소스가 build나 deploy가 안 됐으면 (빨간색) 안된 걸 확인해주고 오류를 고쳐준다. 오류가 고쳐지면 초록색이 되고 리소스 이름을 클릭하면 다음 창에는 deploy 밑에 링크가 뜬다. 
+그 링크를 들어가서 welcome to azure 뜨면 배포가 성공된 것이다. 
+
++사진
 
 
