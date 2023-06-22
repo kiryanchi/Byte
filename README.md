@@ -1,6 +1,6 @@
-# `{{ 팀 이름 }}` - `{{ 제품/서비스 이름 }}`
+# `Byte` - `FDI(Food of Daegu information)`
 
-해커그라운드 해커톤에 참여하는 `{{ 팀 이름 }}` 팀의 `{{ 제품/서비스 이름 }}`입니다.
+해커그라운드 해커톤에 참여하는 `Byte` 팀의 `FDI(Food of Deagu Information)`입니다.
 
 ## 참고 문서
 
