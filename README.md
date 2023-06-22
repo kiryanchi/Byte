@@ -118,6 +118,8 @@
 
        -배포가 완료됨이 뜨면 리소스로 이동을 누른다.
 
+  ## 4. 배포하기
+
 - 이동을 누르면 나타나는 화면에 오른쪽 5번째 줄에 github프로젝트 옆에 있는 링크를 누른다.
 
  ![image](https://github.com/hackersground-kr/Byte/assets/106953846/d3ada655-be08-48c6-825c-162fd179712b)
