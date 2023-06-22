@@ -37,20 +37,18 @@
 ## 시작하기
 1. 포크뜨기
 
-[github/Byte](https://github.com/hackersground-kr/Byte)에 접속한다.
-
+[hackersground-kr/Byte](https://github.com/hackersground-kr/Byte)에 접속한다.
 
 <img width="592" alt="Fork2" src="https://github.com/hackersground-kr/Byte/assets/106953846/f36247b6-1678-4e90-9c8f-01b2b596f1ff">
 
 사진에 보이는 fork를 누르고 create fork 버튼을 눌러준다.
 
+
 2. 리소스 그룹 만들기
 
 [Microsoft Azure](https://portal.azure.com)에 로그인한다.
 
-좌측 상단의 줄 3개 모양 버튼을 누르면 나오는 리소스 그룹 버튼을 클릭한다.
-
-+ 만들기를 누른다.
+좌측 상단의 줄 3개 모양 버튼을 누르면 나오는 리소스 그룹 버튼을 클릭하고 만들기를 누른다.
 
 누르면 나오는 화면에서 리소스 그룹 옆 칸에 rg-hg-원하는이름(*단, 중복이 되지 않도록 유니크한 이름으로)을 적는다.
 
@@ -58,21 +56,22 @@
 
 하단에 있는 검토+만들기를 클릭하고 만들기 버튼을 누른다.
 
+
 3. 리소스 만들기
 
 좌측 상단에 줄 세개짜리를 누르고 '모든 서비스'를 누른다.
 
 '리소스 그룹'을 클릭한다.
 
-2번에서 만들었던 '리소스 그룹'을 클릭한다.
+![image](https://github.com/hackersground-kr/Byte/assets/106953846/cf4b9786-92f7-4a6f-ba39-925a4d5b5694)
 
-+사진
+2번에서 만들었던 '리소스 그룹'을 클릭한다.(①)
 
-좌측 상단에 '+만들기'를 누른다.
+우측 상단에 '+만들기'를 누른다.(②)
 
 웹앱을 검색하거나 스크롤을 내려서 찾아 클릭하고 만들기를 누른다.
 
-들어가자마자 기본/배포/네트워킹/모니터링/태그/검토+만들기 로 카테고리가 나눠진 화면이 보일 것이다. 각각에 대한 설명을 상세하게 적겠다.
+들어가자마자 " 기본 | 배포 | 네트워킹 | 모니터링 | 태그 | 검토+만들기 " 로 카테고리가 나눠진 화면이 보일 것이다. 각각에 대한 설명을 상세하게 적겠다.
 
 기본 카테고리에서 할 일)
 
@@ -91,8 +90,11 @@
 배포에서 할 일)
 
 -Github Action 설정 – 지속적인 배포 사용을 선택한다.
+
 -Github 계정 권한부여를 누르고 뜨는 화면에 password를 입력한다.
--조직은 hackersground-kr 선택
+
+- 조직은 hackersground-kr 선택
+
 - 리포지토리는 Byte 선택
 - 분기는 main 선택
 
@@ -106,17 +108,24 @@
 
 -배포가 완료됨이 뜨면 리소스로 이동을 누른다.
 
--이동을 누르면 나타나는 화면에 오른쪽 5번째 줄에 github프로젝트 옆에 있는 링크를 누른다.
+![image](https://github.com/hackersground-kr/Byte/assets/106953846/d3ada655-be08-48c6-825c-162fd179712b)
 
-+사진
+-이동을 누르면 나타나는 화면에 오른쪽 5번째 줄에 github프로젝트 옆에 있는 링크를 누른다.
 
 그다음 Actions에 들어간다.
 
-+사진
+![image](https://github.com/hackersground-kr/Byte/assets/106953846/8011589f-97ca-45b2-9e22-dd321931db1c)
 
--리소스가 build나 deploy가 안 됐으면 (빨간색) 안된 걸 확인해주고 오류를 고쳐준다. 오류가 고쳐지면 초록색이 되고 리소스 이름을 클릭하면 다음 창에는 deploy 밑에 링크가 뜬다. 
+
+들어가면 본인이 설정한 웹앱 이름으로 리소스가 만들어진 것을 볼 수 있다. ( 빨간색 네모 )
+
+![image](https://github.com/hackersground-kr/Byte/assets/106953846/066a5db8-5813-42e2-8220-d9dbab169131)
+
+- 좌측의 노란 버튼이 초록색으로 된 것을 확인하고 리소스 이름을 클릭하여 다음 창으로 가 deploy 밑의 링크를 타고 들어간다.
+
+![image](https://github.com/hackersground-kr/Byte/assets/106953846/8f4713fc-7314-44b8-a4f0-2d0fc9cd02c4)
+
 그 링크를 들어가서 welcome to azure 뜨면 배포가 성공된 것이다. 
 
-+사진
 
 
