@@ -38,13 +38,15 @@
 1. 포크뜨기
 [github/Byte](https://github.com/hackersground-kr/Byte)에 접속한다.
 
-<사진>
+![image](https://github.com/hackersground-kr/Byte/assets/106953846/b510bc95-4e65-4fcf-bc5b-73c73583fd2e)
+
+
 
 사진에 보이는 fork를 누르고 create fork 버튼을 눌러준다.
 
 2. 리소스 그룹 만들기
 
-[Microsoft Azure](https://portal.azure.com)에 접속한다.
+[Microsoft Azure](https://portal.azure.com)에 로그인한다.
 
 좌측 상단의 줄 3개 모양 버튼을 누르면 나오는 리소스 그룹 버튼을 클릭한다.
 
