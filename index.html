@@ -8,31 +8,435 @@
     <meta name="author" content="">
 
     <title>Azure App Service - Sample Static HTML Site</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Gasoek+One&family=Grandiflora+One&family=Montserrat:wght@500&family=Orbit&display=swap");
+      @font-face {
+        font-family: "TTWanjudaedunsancheB";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "KCC-Ganpan";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "TTWanjudaedunsancheB";
+      }
 
+      html,
+      body {
+        background-color: #ffdf6d;
+        width: 100%;
+        height: 100%;
+      }
+
+      .main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: center;
+      }
+      .title {
+        margin-top: 180px;
+        text-align: center;
+        color: white;
+        text-shadow: 0 0 2px white;
+        font-size: 4em;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .title:hover {
+        font-size: 4.1em;
+      }
+      .inputText {
+        margin-top: 50px;
+        width: 580px;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid grey;
+        box-shadow: 0 0 10px grey;
+        padding-top: 2px;
+        padding-left: 9px;
+        font-size: 1.8em;
+        transition: 0.5s;
+      }
+      .err-message {
+        display: none;
+        margin-top: 5px;
+        border-radius: 5px;
+        width: 100%;
+        height: 4.5px;
+        color: red;
+        background-color: red;
+        line-height: 2;
+        text-align: center;
+      }
+      .inputText2 {
+        display: none;
+        margin-top: 50px;
+        width: 600px;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid grey;
+        box-shadow: 0 0 10px grey;
+        padding-top: 2px;
+        padding-left: 9px;
+        font-size: 1.8em;
+        transition: 0.5s;
+      }
+      .inputText:hover {
+        width: 620px;
+        height: 55px;
+      }
+      .inputText2:hover {
+        width: 620px;
+        height: 55px;
+      }
+      .container {
+        margin-top: 20px;
+        width: 90%;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .category {
+        margin: 30px;
+        width: 90%;
+        height: 420px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      li {
+        border-radius: 20px;
+        list-style: none;
+        width: 45%;
+        height: 90%;
+        background-color: #ff7e7e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .m-title {
+        height: 10%;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .m-food {
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        margin-left: 5px;
+      }
+
+      .m-container {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        font-size: 13px;
+      }
+      .m-left {
+        margin-right: 5px;
+        width: 55%;
+        height: 100%;
+        margin-left: 5px;
+        font-family: "KCC-Ganpan";
+        color: white;
+        border-radius: 10px;
+      }
+      .m-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 45%;
+        height: 100%;
+        font-family: "KCC-Ganpan";
+        border-radius: 10px;
+      }
+      .img {
+        width: 100%;
+        height: 55%;
+        border-radius: 10px;
+        font-family: "Orbit", sans-serif;
+        transition: 0.5s;
+      }
+      .menu {
+        width: 100%;
+        height: 55%;
+        font-family: "KCC-Ganpan";
+        background: url("./img/post.png");
+        background-size: 92%;
+        box-shadow: 0 0 2px black;
+        color: black;
+        border-radius: 5px;
+        padding-left: 5px;
+        overflow: scroll;
+      }
+      .load {
+        width: 100%;
+        height: 43%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: right;
+        border-radius: 5px;
+        color: white;
+      }
+      .logo {
+        width: 27px;
+        height: 30px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+      .hr {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      hr {
+        width: 95%;
+        color: white;
+        height: 1px;
+        background-color: white;
+        border: none;
+        font-family: "KCC-Ganpan";
+      }
+      .tel {
+        font-family: "KCC-Ganpan";
+        text-decoration: underline;
+      }
+      .address,
+      .time,
+      .park,
+      .re,
+      .busload,
+      .subload {
+        font-family: "KCC-Ganpan";
+        margin-bottom: 3px;
+      }
+    </style>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
   </head>
-
   <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-          <h1>Azure App Service - Sample Static HTML Site</h1>
-          <hr/>
+  <div class="main">
+      <div class="search">
+        <div class="title" onclick="main()">대구 맛집 찾기</div>
+        <input
+          type="text"
+          placeholder="당신의 지역구는?"
+          onkeypress="handleKeyPress(event)"
+          class="inputText"
+        />
+        <input
+          type="text"
+          onkeypress="handleKeyPress2(event)"
+          class="inputText2"
+        />
+        <div class="err-message">!제대로 된 메세지를 입력해주세요!</div>
       </div>
+      <div class="container"></div>
     </div>
+    <script defer>
+      function main() {
+        document.querySelector(".err-message").style = "display: none";
+        const container = document.querySelector(".container");
+        container.innerHTML = "";
+        const inputText = document.querySelector(".inputText");
+        const inputText2 = document.querySelector(".inputText2");
+        inputText.value = "";
+        inputText2.value = "";
+        inputText.style = "display: block;";
+        inputText2.style = "display: none;";
+        document.querySelector(".title").textContent = "대구 맛집 찾기";
+      }
 
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+      let DeaguData;
 
-    <div class="container">
-        
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <img class="img-rectangle" src="img/azure-portal.png" alt="Azure App Service Web Apps" height="140">
-          <h2>Azure App Service Web Apps</h2>
-          <p>App Service Web Apps is a fully managed compute platform that is optimized for hosting websites and web applications. This platform-as-a-service (PaaS) offering of Microsoft Azure lets you focus on your business logic while Azure takes care of the infrastructure to run and scale your apps.</p>
-        </div>
-      </div>
-    </div>
+      function handleKeyPress(event) {
+        const inputText = document.querySelector(".inputText");
+        const inputText2 = document.querySelector(".inputText2");
+        const Arr = [
+          "달서구",
+          "중구",
+          "서구",
+          "남구",
+          "동구",
+          "달성군",
+          "수성구",
+          "북구",
+        ];
+        if (event.keyCode === 13 && inputText.value) {
+          let temp = inputText.value;
+          if (Arr.includes(temp)) {
+            inputText.value = "데이터 요청중...";
+            inputText.disabled = true;
+            document.querySelector(".err-message").style = "display: none";
+            console.log(temp);
+            fetch("http://127.0.0.1:3000/getJson", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                inputData: temp,
+              }),
+              mode: "cors",
+            })
+              .then((res) => res.json())
+              .then((data) => data["data"])
+              .then((info) => {
+                inputText.disabled = false;
+                console.log(info);
+                DeaguData = info;
+                inputText.style = "display: none";
+                inputText2.style = "display: block";
+                document.querySelector(".title").textContent =
+                  "메인 화면으로 가기";
+                inputText2.setAttribute(
+                  "placeholder",
+                  `${temp} >> 동을 입력하세요.`
+                );
+              })
+              .catch((error) => {
+                console.error("POST 요청 중 오류 발생:", error);
+              });
+          } else {
+            document.querySelector(".err-message").style = "display: block";
+          }
+        }
+      }
+      function handleKeyPress2(event) {
+        document.querySelector(".err-message").style = "display: none";
+        const container = document.querySelector(".container");
+        container.innerHTML = "";
+        let isValue = true;
+        const inputText = document.querySelector(".inputText");
+        const inputText2 = document.querySelector(".inputText2");
+        const ulNode = document.getElementById("category");
+        let cnt = 2;
+        if (event.keyCode === 13 && inputText2.value) {
+          let foodImageArr = [];
+          for (let i = 0; i < DeaguData.length; i++) {
+            if (
+              DeaguData[i]["GNG_CS"].includes(inputText2.value) ||
+              DeaguData[i]["GNG_CS"].includes(
+                inputText2.value.slice(0, inputText2.value.length - 1)
+              )
+            ) {
+              isValue = false;
+              const {
+                BZ_NM,
+                FD_CS,
+                GNG_CS,
+                SEAT_CNT,
+                BKN_YN,
+                PKPL,
+                MNU,
+                SBW,
+                BUS,
+                MBZ_HR,
+                TLNO,
+              } = DeaguData[i];
+              foodImageArr.push(FD_CS);
+              if (cnt % 2 == 0) {
+                const ulElement = document.createElement("ul");
+                ulElement.className = "category";
+                ulElement.id = "category" + String(cnt);
+
+                const targetElement = document.querySelector(".container");
+                targetElement.appendChild(ulElement);
+                const liElement = document.createElement("li");
+                liElement.innerHTML = `
+              <span class="m-title"><img class="logo "src="./img/deaguFoodLogo.png">${BZ_NM}<span class="m-food">#${FD_CS}</span></span>
+                  <div class="m-container">
+                    <div class="m-left">
+                      <img class="img" id="img${cnt}">
+                      <div class="address">주소 : ${GNG_CS}</div>
+                      <div class="time">운영시간 : ${MBZ_HR}</div>
+                      <div class="re">${SEAT_CNT} / 예약가능 여부 : ${BKN_YN}</div>
+                      <div class="park">주차장 : ${PKPL}</div>
+                      <div class="tel">연락처 : ${TLNO}</div>
+                    </div>
+                    <div class="m-right">
+                      <div class="menu">${MNU}</div>
+                      <div class="load">
+                        <div class="busload">↓지하철 오시는 길↓<br />${SBW}</div><div class="hr"><hr></div>
+                        <div class="subload">↓버스 오시는 길↓<br />${BUS}</div>
+                      </div>
+                    </div>
+                  </div>
+              `;
+                const targetElement2 = document.querySelector(
+                  "#category" + String(cnt)
+                );
+                targetElement2.appendChild(liElement);
+              } else {
+                const liElement = document.createElement("li");
+                liElement.innerHTML = `
+              <span class="m-title"><img class="logo "src="./img/deaguFoodLogo.png">${BZ_NM}<span class="m-food">#${FD_CS}</span></span>
+                  <div class="m-container">
+                    <div class="m-left">
+                      <img class="img" id="img${cnt}">
+                      <div class="address">주소 : ${GNG_CS}</div>
+                      <div class="time">운영시간 : ${MBZ_HR}</div>
+                      <div class="re">${SEAT_CNT} / 예약가능 여부 : ${BKN_YN}</div>
+                      <div class="park">주차장 : ${PKPL}</div>
+                      <div class="tel">연락처 : ${TLNO}</div>
+                    </div>
+                    <div class="m-right">
+                      <div class="menu">${MNU}</div>
+                      <div class="load">
+                        <div class="busload">↓지하철 오시는 길↓<br />${SBW}</div><div class="hr"><hr></div>
+                        <div class="subload">↓버스 오시는 길↓<br />${BUS}</div>
+                      </div>
+                    </div>
+                  </div>
+              `;
+                const targetElement2 = document.querySelector(
+                  "#category" + String(cnt - 1)
+                );
+                targetElement2.appendChild(liElement);
+              }
+              cnt++;
+            }
+          }
+          if (isValue) {
+            document.querySelector(".err-message").style = "display: block";
+          }
+        }
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
