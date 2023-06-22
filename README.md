@@ -28,14 +28,15 @@
 ### 사전 준비 사항
 
 > **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위해 사전에 필요한 준비 사항들을 적어주세요.**
+> git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
+> 파이썬을 씀
 
 ## 시작하기
+개발한 파일 팀 깃 허브에 업로드
+애저 사이트 들어가서 웹앱 만들기 클릭 그리고 깃허브 액션 허용해 연동
+깃허브 액션에 들어간다
+액션에 오류 없는 지 확인한다
+오류 없으면 전에 연동한 애저를에 들어간다
+welcome to azure뜨면 배포 끝
 
-1. 샘플 애플리케이션을 로컬 워크스테이션에 다운로드하거나 복제한다. git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
-2. 로컬에서 애플리케이션을 실행하려면
- 1) 애플리케이션 폴더로 이동
- 2) 앱에 대한 가상 환경을 만든다
- 3) 종속성을 설치한다
- 4) 앱을 실행한다
- 5) 엡브라우저에서 http://localhost:5000에 있는 샘플 애플리케이션을 찾는다.
 
