@@ -36,7 +36,11 @@
 
 ## 시작하기
 1. 포크뜨기
+
 [github/Byte](https://github.com/hackersground-kr/Byte)에 접속한다.
+
+
+<img width="592" alt="Fork2" src="https://github.com/hackersground-kr/Byte/assets/106953846/f36247b6-1678-4e90-9c8f-01b2b596f1ff">
 
 사진에 보이는 fork를 누르고 create fork 버튼을 눌러준다.
 
